@@ -1,18 +1,28 @@
 #include <stdio.h>
+#include <string.h>
+
+struct produto
+	{ 
+		int codigo;
+		char descricao[30];
+		float preco;
+	};
+
 int main(){
-	int a, i, j;
+	produto produtos[50];
+	int i;
+	float percent;
 	
-	printf("digite um numero:\n");
-	scanf("%d", &a);
-	
-	int u=a;
-	
-	for(i=1;i<=a;i++){
-		u--;
-		for(j=1;j<=u+1;j++){
-			printf("%d", j);
-		}
-		printf("\n");
+	for(i=0;i<50;i++){
+		
+		scanf("%d", &produtos[i].codigo);
+		gets(produtos[i].descricao);
+		scanf("%f", &produtos[i].preco);
+		
 	}
 	
+	printf
+	
 }
+	
+	
