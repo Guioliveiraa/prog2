@@ -1,29 +1,35 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-int divisao(int dividendo, int divisor, int *resto);
+typedef struct cadastro {
+	char *nome;
+	int idade;
+	char sexo[10];
+}cadastrar;
 
 int main(){
-	int dividendo, divisor;	
-	printf("Entre com um numero n1:");
-	scanf("%d", &dividendo);
-	printf("Entre com um numero n2:");
-	scanf("%d", &divisor);
+	//int a, b;
+	cadastrar aluno;
 	
-	int resto;
-	int result=divisao(dividendo, divisor, &resto);
 	
-	printf("Resultado: %d\n", result);
-	printf("Resto da divisao: %d", resto);
+	/*FILE *arq;
 	
-	return 0;
+	scanf("%d %d", &a, &b);
+	
+	arq= fopen("arq.txt", "a");
+	fprintf(arq,"%d;%d", a, b);
+	fclose(arq);*/
+	
+    strcpy(aluno.nome, "guilherme");
+	
+	//scanf("%s", &aluno.nome);
+	
+	printf("%s", aluno.nome);
+	
+	
+	
+	
+	
 	
 }
-
-int divisao(int dividendo, int divisor, int *resto){
-	int result = dividendo/divisor;
-	
-	*resto=dividendo%divisor;
-	
-	return result;
-}
-
